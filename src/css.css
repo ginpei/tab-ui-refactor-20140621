@@ -1,0 +1,58 @@
+body {
+	color: #333;
+	font: 12px/18px "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+}
+
+.tab-button-container {
+	padding-left: 4px;
+}
+.tab-button {
+	background-color: #99c;
+	border-radius: 4px 4px 0 0;
+	color: #fff;
+	display: inline-block;
+	padding: 4px 16px;
+	text-decoration: none;
+	text-shadow: -1px -1px #333;
+	vertical-align: bottom;
+}
+.tab-button:hover,
+.tab-button:focus {
+	text-decoration: underline;
+	outline: none;
+}
+.tab-page {
+	background-color: #fff;
+	border: solid 4px #69f;
+	border-radius: 4px;
+	display: none;
+	min-height: 200px;
+	padding: 16px;
+	width: 400px;
+}
+
+.design-list {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+.design-list li {
+	display: inline-block;
+}
+.design-list li input {
+	display: none;
+}
+.design-list li input + img {
+	cursor: pointer;
+	opacity: 0.7;
+	padding: 5px;
+}
+.design-list li input + img:hover {
+	opacity: 1;
+}
+.design-list li input:checked + img {
+	border: solid 4px #69f;
+	border-radius: 4px;
+	opacity: 1;
+	padding: 1px;
+}

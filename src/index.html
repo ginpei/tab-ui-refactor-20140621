@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<title>Tab UI</title>
+		<link rel="stylesheet" href="css.css">
+	</head>
+	<body>
+		<h1>User Preferences</h1>
+		<div class="ui-tab">
+			<nav class="tab-button-container">
+				<a id="profile-link" class="tab-button" style="background-color:#69f; padding-bottom:6px;" href="#profile">Profile</a>
+				<a id="notification-link" class="tab-button" href="#notification">Notification</a>
+				<a id="design-link" class="tab-button" href="#design">Design</a>
+			</nav>
+			<article id="profile" class="tab-page" style="display:block">
+				<table>
+					<tr>
+						<th>Name</th>
+						<td><input type="text" placeholder="Ginpei" /></td>
+					</tr>
+					<tr>
+						<th>Location</th>
+						<td><input type="text" placeholder="Yokohama City" /></td>
+					</tr>
+				</table>
+			</article>
+			<article id="notification" class="tab-page">
+				<ul>
+					<li><label><input type="checkbox" />Anybody says anything</label></li>
+					<li><label><input type="checkbox" />When my name is called</label></li>
+					<li><label><input type="checkbox" />When cookies are baked</label></li>
+				</ul>
+			</article>
+			<article id="design" class="tab-page">
+				<ul class="design-list">
+					<li><label><input type="radio" name="design" checked /><img src="penguin.jpg" width="75" height="75" alt="penguin" /></label></li>
+					<li><label><input type="radio" name="design" /><img src="rhino.jpg" width="75" height="75" alt="rhino" /></label></li>
+					<li><label><input type="radio" name="design" /><img src="tiger.jpg" width="75" height="75" alt="tiger" /></label></li>
+				</ul>
+			</article>
+		</div>
+		<script src="jquery.js"></script>
+		<script src="tab.js"></script>
+	</body>
+</html>
