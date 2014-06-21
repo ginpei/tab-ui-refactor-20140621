@@ -3,54 +3,36 @@ $('#profile-link').on('click', function(event) {
 	event.preventDefault();
 
 	// 他のボタンを不活性化
-	$('#notification-link, #design-link').css({
-		backgroundColor: '',
-		paddingBottom: ''
-	});
+	$('#notification-link, #design-link').removeClass('active');
 
 	// このボタンを不活性化
-	$('#profile-link').css({
-		backgroundColor: '#69f',
-		paddingBottom: '6px'
-	});
+	$('#profile-link').addClass('active');
 
 	// 他のページを不可視化
-	$('#notification, #design').hide();
+	$('#notification, #design').removeClass('active');
 
 	// このページを可視化
-	$('#profile').show();
+	$('#profile').addClass('active');
 });
 
 // Notificationをクリック
 $('#notification-link').on('click', function(event) {
 	event.preventDefault();
 
-	$('#profile-link, #design-link').css({
-		backgroundColor: '',
-		paddingBottom: ''
-	});
-	$('#notification-link').css({
-		backgroundColor: '#69f',
-		paddingBottom: '6px'
-	});
+	$('#profile-link, #design-link').removeClass('active');;
+	$('#notification-link').addClass('active');
 
-	$('#profile, #design').hide();
-	$('#notification').show();
+	$('#profile, #design').removeClass('active');
+	$('#notification').addClass('active');
 });
 
 // Designタブをクリック
 $('#design-link').on('click', function(event) {
 	event.preventDefault();
 
-	$('#profile-link, #notification-link').css({
-		backgroundColor: '',
-		paddingBottom: ''
-	});
-	$('#design-link').css({
-		backgroundColor: '#69f',
-		paddingBottom: '6px'
-	});
+	$('#profile-link, #notification-link').removeClass('active');
+	$('#design-link').addClass('active');
 
-	$('#profile, #notification').hide();
-	$('#design').show();
+	$('#profile, #notification').removeClass('active');
+	$('#design').addClass('active');
 });

@@ -21,6 +21,10 @@ body {
 	text-decoration: underline;
 	outline: none;
 }
+.tab-button.active {
+	background-color: #69f;
+	padding-bottom: 6px;
+}
 .tab-page {
 	background-color: #fff;
 	border: solid 4px #69f;
@@ -29,6 +33,9 @@ body {
 	min-height: 200px;
 	padding: 16px;
 	width: 400px;
+}
+.tab-page.active {
+	display: block;
 }
 
 .design-list {
