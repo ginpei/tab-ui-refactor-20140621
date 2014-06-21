@@ -1,34 +1,34 @@
-function switchTab() {
+function switchTab(type) {
 	// 他のボタンを不活性化
-	$('#notification-link, #design-link').removeClass('active');
+	$('#profile-link, #notification-link, #design-link').removeClass('active');
 
 	// このボタンを活性化
-	$('#profile-link').addClass('active');
+	$('#' + type + '-link').addClass('active');
 
 	// 他のページを不可視化
-	$('#notification, #design').removeClass('active');
+	$('#profile, #notification, #design').removeClass('active');
 
 	// このページを可視化
-	$('#profile').addClass('active');
+	$('#' + type).addClass('active');
 }
 
 // Profileタブをクリック
 $('#profile-link').on('click', function(event) {
 	event.preventDefault();
 
-	switchTab();
+	switchTab('profile');
 });
 
 // Notificationをクリック
 $('#notification-link').on('click', function(event) {
 	event.preventDefault();
 
-	switchTab();
+	switchTab('notification');
 });
 
 // Designタブをクリック
 $('#design-link').on('click', function(event) {
 	event.preventDefault();
 
-	switchTab();
+	switchTab('design');
 });
