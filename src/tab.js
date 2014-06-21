@@ -12,23 +12,12 @@ function switchTab(type) {
 	$('#' + type).addClass('active');
 }
 
-// Profileタブをクリック
-$('#profile-link').on('click', function(event) {
+$('#profile-link, #notification-link, #design-link').on('click', function(event) {
 	event.preventDefault();
 
-	switchTab('profile');
-});
+	var $button = $(this);
+	var href = $button.attr('href');
+	var type = href.slice(1);
 
-// Notificationをクリック
-$('#notification-link').on('click', function(event) {
-	event.preventDefault();
-
-	switchTab('notification');
-});
-
-// Designタブをクリック
-$('#design-link').on('click', function(event) {
-	event.preventDefault();
-
-	switchTab('design');
+	switchTab(type);
 });
